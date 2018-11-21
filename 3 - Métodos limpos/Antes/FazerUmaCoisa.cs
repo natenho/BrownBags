@@ -1,16 +1,47 @@
 class FooService
 {
-    public void UpdateFooStatusAndRepository(Foo foo)
+    private Forno _forno = new Forno();
+    private Batedeira _batedeira = new Batedeira();
+    
+    public Bolo FazerBolo()
     {
-        if (foo.HasFjord())
+        _forno.Temperatura = 180;
+        _forno.Acender();
+
+        var ingredientes = new [] { "clara" };
+
+        string claraEmNeve = "";
+        while (claraEmNeve != "clara em neve")
         {
-            repository.Update(foo.Id, collaborator.Calculate(foo));
+            for (int i = 0; i < 10; i++)
+            {
+                claraEmNeve = _batedeira.Bater(ingredientes);
+            }
         }
 
-        if (ImportantBusinessLogic())
+        ingredientes = new [] { "gemas", "margarina", "açúcar", claraEmNeve, "fermento" };
+
+        Random rng = new Random();
+
+        int n = ingredientes.Count;
+        while (n > 1)
         {
-            foo.Status = FooStatus.Fnagled;
-            _collaborator.CollectFnagledState(foo);
+            n--;
+            int k = rng.Next(n + 1);
+            var value = ingredientes[k];
+            ingredientes[k] = ingredientes[n];
+            ingredientes[n] = value;
         }
+
+        var forma = new Forma(mistura);        
+        forma.Untar();
+        forma.Adicionar("farinha");
+
+        while(!forma.BoloEstaPronto)        
+        {
+            continue;
+        }
+
+        return forma.Bolo;
     }
 }
