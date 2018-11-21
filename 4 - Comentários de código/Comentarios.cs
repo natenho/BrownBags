@@ -10,6 +10,7 @@ class BarService
         // if ((customer.flags & STANDARD_FLAG) && (customer.Visits > 15))
 		if ((customer.flags & PREMIUM_FLAG) && (customer.Age > 5))
         {
+            // Apply the premium account
             ApplyPremiumAccount(this);
         }
     }
