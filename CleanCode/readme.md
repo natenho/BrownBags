@@ -6,7 +6,7 @@
 	• Comentários de código
 	• Princípios gerais
     
- Código Limpo
+ # Código Limpo
 
 	- Simples e direto
 	- Facilita o trabalho de outros desenvolvedores, oferencendo formas mais claras de fazer uma tarefa
@@ -16,9 +16,9 @@
 
 "Se quiser que seu código seja de fácil escrita (mantido), torne-o de fácil leitura"
 
-Regra do Escoteiro (Boy Scout Rule)
+# Regra do Escoteiro (Boy Scout Rule)
 
-Nomes significativos
+# Nomes significativos
 
 	- Nomes pronunciáveis (fácil de falar com outras pessoas)
 	- Nomes que revelam propósito
@@ -54,16 +54,16 @@ Nomes significativos
 		
 "Vale a pena refatorar nomes para se ter boa legibilidade, mesmo que possa causar surpresas em curto prazo"
 
-Métodos
+# Métodos
 
-Devem ser pequenos
+## Devem ser pequenos
 
-Blocos if/else/loops
+## Blocos if/else/loops
 	Devem ter apenas uma linha
 		If (x && Y & pasdapsda & sadlkjsalkdja)
 		If(PodeFazer())
 		
-"Devem fazer uma coisa. Devem fazer direito e somente aquilo"
+## "Devem fazer uma coisa. Devem fazer direito e somente aquilo"
 
 Como fazer uma coisa só?
 
@@ -76,7 +76,7 @@ Como fazer uma coisa só?
 		Var conteudo = ProduzirConteudo()
 		GravarArquivo(conteudo)		
 		
-Argumentos
+## Argumentos
 
 	Qual o número ideal de argumentos para um método?
 		Zero?
@@ -98,13 +98,13 @@ Argumentos
 		FaAquiloCondicaoY
 		
 
-Efeitos Colaterais
+## Efeitos Colaterais
 	Mentiras
 	Seu método promete fazer uma coisa e também faz outra.
 	
 	Mexer em variáveis inesperadamente
 	
-Command Query Separation
+## Command Query Separation
 
 	CQRS
 		Um método deve
@@ -115,18 +115,18 @@ Command Query Separation
 			
 "Não se preocupe em escrever código limpo de primeira"
 
-A polêmica sobre comentários de código
+# A polêmica sobre comentários de código
 	
 "O uso adequado de comentários é para compensar a nossa falha em nos expressar no código"
 
-DRY (Don't repeat yourself)
+# DRY (Don't repeat yourself)
 	Não repita código
 	Não repita design de código
 		
-KISS (Keep it simple, stupid)
+# KISS (Keep it simple, stupid)
 	"Tudo deve ser feito da forma mais simples possível, mas não mais simples que isso"
 	
-POLS (Principle of Least Surprise/Astonishment)
+# POLS (Principle of Least Surprise/Astonishment)
 	
 	Calculadora
 	
@@ -145,7 +145,7 @@ POLS (Principle of Least Surprise/Astonishment)
 	ParseInt("70") = 70
 	PraseInt("070") = 56 
 
-YAGNI (You ain't gonna need it)
+# YAGNI (You ain't gonna need it)
 
 	Converte um número em um texto por extenso
 		Pra permitir outros idiomas
@@ -153,22 +153,21 @@ YAGNI (You ain't gonna need it)
 	Não tente prever o futuro
 	
 	"Trabalhe com  o que você tem em mãos"
-	
-Law of Demeter
 
-Outros (orientação a objeto)
+# Outros
 
-SOLID
-GRASP
+	Law of Demeter
+	SOLID
+	GRASP
 
-Críticas 
+# Críticas 
 
-Nomes de interface sem o prefixo "I".
+## Nomes de interface sem o prefixo "I".
 	IAnimal
 	Animal
 	AnimalImpl
 	
-Prefixo de fields (C# exclusivamente)
+## Prefixo de fields (C# exclusivamente)
 
 	_nome
 	_endereco
@@ -176,6 +175,6 @@ Prefixo de fields (C# exclusivamente)
 	this.nome
 	this.endereco
 	
-Microsoft não recomenda _ (this)
-Microsoft Github _
+	Microsoft não recomenda _ , recomenda this (FxCop)
+	Microsoft Github usa _
 
